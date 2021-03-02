@@ -36,7 +36,11 @@ namespace getaclub_api
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseHttpsRedirection();
+            app.UseCors(builder => builder
+                .WithOrigins("http://localhost")
+                .WithMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
+                .WithHeaders("Origin", "Authorization", "Token", "Content-Type","Access-Control-Allow-Origin")
+            );
 
             app.UseRouting();
 

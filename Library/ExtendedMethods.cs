@@ -306,7 +306,7 @@ namespace getaclub_api.Library
 		public static string ToStringApp(this DateTime dt)
 		{
 			string rtn = "";
-			rtn = dt.ToString(CommonExtensions.Constants.AppDateFormat);
+			//rtn = dt.ToString(CommonExtensions.Constants.AppDateFormat);
 			return rtn;
 		}
 

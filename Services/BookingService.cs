@@ -4,34 +4,34 @@ using getaclub_api.Models;
 using System;
 namespace getaclub_api.Services
 {
-    public class RoomService
+    public class BookingService
     {
-        public List<RoomModel> all()
+        public List<BookingModel> all()
         {
-            RoomData droom = new RoomData();
+            BookingData droom = new BookingData();
             return droom.all();
         }
 
-        public RoomModel get(int id)
+        public BookingModel get(int id)
         {
-            RoomData droom = new RoomData();
+            BookingData droom = new BookingData();
             return droom.get(id);
         }
 
-        public bool insert(RoomModel room)
+        public bool insert(BookingModel room)
         {
-            RoomData droom = new RoomData();
+            BookingData droom = new BookingData();
             return droom.insert(room);
         }
 
-        public bool update(RoomModel room,int id)
+        public bool update(BookingModel room,int id)
         {
-            RoomData droom = new RoomData();
+            BookingData droom = new BookingData();
             return droom.update(room,id);
         }
         public bool delete(int id)
         {
-            RoomData droom = new RoomData();
+            BookingData droom = new BookingData();
             return droom.delete(id);
         }
 

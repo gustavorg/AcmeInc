@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using getaclub_api.Models;
@@ -9,14 +9,14 @@ namespace getaclub_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RoomController:ControllerBase
+    public class BookingController:ControllerBase
     {
         [HttpGet]
         [Route("")]
         public IActionResult  all()
         {
-            RoomService service = new RoomService();
-            var status = true; List<RoomModel>  result = null;
+            BookingService service = new BookingService();
+            var status = true; List<BookingModel>  result = null;
             try{
                 result = service.all();
             }catch (System.Exception)
@@ -36,8 +36,8 @@ namespace getaclub_api.Controllers
         [Route("{id}")]
         public IActionResult  get(int id)
         {
-            RoomService service = new RoomService();
-            var status = true; RoomModel result = null;
+            BookingService service = new BookingService();
+            var status = true; BookingModel result = null;
             try{
                 result = service.get(id);
             }catch (System.Exception)
@@ -55,15 +55,19 @@ namespace getaclub_api.Controllers
 
         [HttpPost]
         [Route("")]
-        public IActionResult  insert(RoomModel room)
+        public IActionResult  insert(BookingModel room)
         {
-            RoomService service = new RoomService();
+            BookingService service = new BookingService();
+            ClientService sclient = new ClientService();
             var status = true; bool result = false;
-            try{
-                result = service.insert(room);
-            }catch (System.Exception)
-            {
-                status = false;
+            
+            if(sclient.exist(room.idClient)){
+                try{
+                    result = service.insert(room);
+                }catch (System.Exception)
+                {
+                    status = false;
+                }
             }
 
             var rtn = new {
@@ -76,9 +80,9 @@ namespace getaclub_api.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public IActionResult  update(int id,RoomModel room)
+        public IActionResult  update(int id,BookingModel room)
         {
-            RoomService service = new RoomService();
+            BookingService service = new BookingService();
             var status = true; bool result = false;
             try{
                 result = service.update(room,id);
@@ -99,7 +103,7 @@ namespace getaclub_api.Controllers
         [Route("{id}")]
         public IActionResult  delete(int id)
         {
-            RoomService service = new RoomService();
+            BookingService service = new BookingService();
             var status = true; bool result = false;
             try{
                 result = service.delete(id);

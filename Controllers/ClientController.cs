@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 using getaclub_api.Models;
@@ -9,14 +9,14 @@ namespace getaclub_api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RoomController:ControllerBase
+    public class ClientController:ControllerBase
     {
         [HttpGet]
         [Route("")]
         public IActionResult  all()
         {
-            RoomService service = new RoomService();
-            var status = true; List<RoomModel>  result = null;
+            ClientService service = new ClientService();
+            var status = true; List<ClientModel>  result = null;
             try{
                 result = service.all();
             }catch (System.Exception)
@@ -36,8 +36,8 @@ namespace getaclub_api.Controllers
         [Route("{id}")]
         public IActionResult  get(int id)
         {
-            RoomService service = new RoomService();
-            var status = true; RoomModel result = null;
+            ClientService service = new ClientService();
+            var status = true; ClientModel result = null;
             try{
                 result = service.get(id);
             }catch (System.Exception)
@@ -55,12 +55,12 @@ namespace getaclub_api.Controllers
 
         [HttpPost]
         [Route("")]
-        public IActionResult  insert(RoomModel room)
+        public IActionResult  insert(ClientModel client)
         {
-            RoomService service = new RoomService();
+            ClientService service = new ClientService();
             var status = true; bool result = false;
             try{
-                result = service.insert(room);
+                result = service.insert(client);
             }catch (System.Exception)
             {
                 status = false;
@@ -76,12 +76,12 @@ namespace getaclub_api.Controllers
 
         [HttpPut]
         [Route("{id}")]
-        public IActionResult  update(int id,RoomModel room)
+        public IActionResult  update(int id,ClientModel client)
         {
-            RoomService service = new RoomService();
+            ClientService service = new ClientService();
             var status = true; bool result = false;
             try{
-                result = service.update(room,id);
+                result = service.update(client,id);
             }catch (System.Exception)
             {
                 status = false;
@@ -99,7 +99,7 @@ namespace getaclub_api.Controllers
         [Route("{id}")]
         public IActionResult  delete(int id)
         {
-            RoomService service = new RoomService();
+            ClientService service = new ClientService();
             var status = true; bool result = false;
             try{
                 result = service.delete(id);
