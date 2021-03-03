@@ -6,10 +6,10 @@ namespace getaclub_api.Services
 {
     public class BookingService
     {
-        public List<BookingModel> all()
+        public List<BookingModel> all(BookingModel booking)
         {
             BookingData droom = new BookingData();
-            return droom.all();
+            return droom.all(booking);
         }
 
         public BookingModel get(int id)
@@ -35,5 +35,35 @@ namespace getaclub_api.Services
             return droom.delete(id);
         }
 
+        /* Catering */
+
+        public bool cateringInsert(int idBooking,BookingCateringModel bc)
+        {
+            BookingData droom = new BookingData();
+            return droom.cateringInsert(idBooking,bc);
+        }
+        public bool cateringUpdate(int id,BookingCateringModel bc)
+        {
+            BookingData droom = new BookingData();
+            return droom.cateringUpdate(id,bc);
+        }
+        public bool cateringDelete(int id)
+        {
+            BookingData droom = new BookingData();
+            return droom.cateringDelete(id);
+        }
+
+        public List<BookingCateringModel> cateringAll(int idBooking)
+        {
+            BookingData droom = new BookingData();
+            return droom.cateringAll(idBooking);
+        }
+
+        public BookingCateringModel cateringGet(int id)
+        {
+            BookingData droom = new BookingData();
+            return droom.cateringGet(id);
+        }
+        
     }
 }

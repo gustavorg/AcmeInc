@@ -31,3 +31,4 @@ C:\xampp\htdocs\getaclub\obj\Debug\netcoreapp3.1\staticwebassets\getaclub-api.St
 C:\xampp\htdocs\getaclub\obj\Debug\netcoreapp3.1\getaclub-api.dll
 C:\xampp\htdocs\getaclub\obj\Debug\netcoreapp3.1\getaclub-api.pdb
 C:\xampp\htdocs\getaclub\obj\Debug\netcoreapp3.1\getaclub-api.genruntimeconfig.cache
+C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\Getaclub.postman_collection.json

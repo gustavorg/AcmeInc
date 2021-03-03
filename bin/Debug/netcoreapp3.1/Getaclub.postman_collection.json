@@ -286,166 +286,18 @@
 					},
 					"response": []
 				}
-			],
-			"description": "- CRUD de Salones\r\n- CRUD de Horario de cada salón"
+			]
 		},
 		{
 			"name": "booking",
 			"item": [
 				{
-					"name": "catering",
-					"item": [
-						{
-							"name": "insert",
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idCatering\": 1,\r\n    \"quantity\" : 13\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/booking/catering/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"booking",
-										"catering",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "update",
-							"request": {
-								"method": "PUT",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"idCatering\": 1,\r\n    \"quantity\" : 13\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "http://localhost:8080/booking/catering/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"booking",
-										"catering",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "delete",
-							"request": {
-								"method": "DELETE",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/booking/catering/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"booking",
-										"catering",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "all",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/booking/catering/all/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"booking",
-										"catering",
-										"all",
-										"1"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "get",
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:8080/booking/catering/get/1",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "8080",
-									"path": [
-										"booking",
-										"catering",
-										"get",
-										"1"
-									]
-								}
-							},
-							"response": []
-						}
-					]
-				},
-				{
 					"name": "insert",
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idRoom\": 1,\r\n    \"idClient\" : 1,\r\n    \"date\": \"2021-03-02\",\r\n    \"startHour\" : \"11:31\",\r\n    \"endHour\" : \"13:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/booking",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
@@ -455,26 +307,8 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idRoom\": 1,\r\n    \"idClient\" : 1,\r\n    \"date\": \"2021-03-02\",\r\n    \"startHour\" : \"11:31\",\r\n    \"endHour\" : \"12:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/booking/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking",
-								"2"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
@@ -485,47 +319,18 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/booking/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking",
-								"2"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
 				},
 				{
 					"name": "all",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"idRoom\": 1,\r\n    \"idClient\" : 1,\r\n    \"startDate\": \"2021-03-01\",\r\n    \"endDate\": \"2021-03-04\",\r\n    \"idBookingStatus\" : 0\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:8080/booking",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
@@ -535,175 +340,17 @@
 					"request": {
 						"method": "POST",
 						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "id",
-									"value": "1",
-									"type": "text"
-								}
-							]
-						},
 						"url": {
-							"raw": "http://localhost:8080/booking/alert",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking",
-								"alert"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/booking/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"booking",
-								"1"
-							]
+							"raw": ""
 						}
 					},
 					"response": []
 				}
-			],
-			"description": "- CRUD de reservas\r\n- Reserva\r\n- Alerta\r\n  Uso de correo para alertar al cliente que su reserva va a finalizar"
+			]
 		},
 		{
 			"name": "catering",
-			"item": [
-				{
-					"name": "all",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/catering",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"catering"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "get",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/catering/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"catering",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "insert",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Dulces\",\r\n    \"price\" : 400.10\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/catering",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"catering"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Dulces y Bocaditos\",\r\n    \"price\" : 23.10\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8080/catering/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"catering",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:8080/catering/6",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8080",
-							"path": [
-								"catering",
-								"6"
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"description": "- CRUD DE Catering\r\n- Items a añadir en la reserva del cliente"
+			"item": []
 		},
 		{
 			"name": "payment",
@@ -741,8 +388,7 @@
 					},
 					"response": []
 				}
-			],
-			"description": "- Generación del total a pagar por reservar, precio de la sala por hora (o calculo por minutos) y el monto del catering\r\n- Actualizar estado del pago"
+			]
 		},
 		{
 			"name": "client",
@@ -797,21 +443,9 @@
 				},
 				{
 					"name": "all",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:8080/client",
 							"protocol": "http",
@@ -866,8 +500,7 @@
 					},
 					"response": []
 				}
-			],
-			"description": "CRUD DE Cliente"
+			]
 		}
 	]
 }

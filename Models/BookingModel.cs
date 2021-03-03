@@ -4,6 +4,7 @@ namespace getaclub_api.Models
     public class BookingModel
     {
         public int id { get; set; }
+        public int idBookingStatus { get; set; }
         public int idRoom { get; set; }
         public int idClient { get; set; }
         public string date { get; set; }
@@ -14,5 +15,7 @@ namespace getaclub_api.Models
         public int createdBy { get; set; }
         public DateTime updatedAt { get; set; }
         public int updatedBy { get; set; }
+        public string startDate { get; set; }
+        public string endDate { get; set; }
     }
 }
