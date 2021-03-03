@@ -12,6 +12,12 @@ namespace getaclub_api.Services
             return droom.all(booking);
         }
 
+        public List<BookingModel> alert()
+        {
+            BookingData droom = new BookingData();
+            return droom.alert();
+        }
+
         public BookingModel get(int id)
         {
             BookingData droom = new BookingData();

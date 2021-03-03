@@ -53,6 +53,42 @@ namespace getaclub_api.Data
             return rtn;
         }
 
+        public List<BookingModel> alert(){
+            List<BookingModel> rtn = null;
+            DataTable dt = base.ExecuteDataTable("usp_alert_s_bookings");
+            if (dt!=null && dt.Rows.Count>0)
+            {
+                rtn = new List<BookingModel>();
+
+                foreach(DataRow dr in dt.Rows)
+                {
+                    rtn.Add(new BookingModel{
+                        id = Convert.ToInt16(dr["id"]),
+                        idRoom = Convert.ToInt16(dr["idRoom"]),
+                        date = Convert.ToString(dr["date"]),
+                        startHour = Convert.ToString(dr["startHour"]),
+                        endHour = Convert.ToString(dr["endHour"]),
+                        createdAt = Convert.ToDateTime(dr["createdAt"]),
+                        updatedAt = Convert.ToDateTime(dr["updatedAt"]),
+                        client = new ClientModel{
+                            id = Convert.ToInt16(dr["idClient"]),
+                            name = Convert.ToString(dr["name"]),
+                            lastName = Convert.ToString(dr["lastName"]),
+                            surName = Convert.ToString(dr["surName"]),
+                            businessName = Convert.ToString(dr["businessName"]),
+                            idDocumentType = Convert.ToInt16(dr["idDocumentType"]),
+                            document = Convert.ToString(dr["document"]),
+                            email = Convert.ToString(dr["email"]),
+                            phoneCode = Convert.ToString(dr["phoneCode"]),
+                            phone = Convert.ToString(dr["phone"]),
+                            gender = Convert.ToString(dr["gender"])
+                        }
+                    });
+                }
+            }
+
+            return rtn;
+        }
         public BookingModel get(int id){
             BookingModel  rtn = null;
 

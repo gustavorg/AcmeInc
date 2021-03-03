@@ -12,11 +12,8 @@ C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\getaclub-api.runtimeconfig.json
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\getaclub-api.runtimeconfig.dev.json
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\getaclub-api.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\getaclub-api.pdb
-C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\EPPlus.dll
-C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\ExcelDataReader.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\MimeKit.dll
-C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
 C:\xampp\htdocs\getaclub\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll

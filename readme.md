@@ -8,10 +8,12 @@
 
   # 3. Ejecutar db.sql, se encuentra en la raiz
 
-  # 3. Ejecutar el Proyecto con el comando "dotnet run --urls=http://localhost:8080"
-  
-  # 4. Importar en Postman Getaclub.postman_collection.json, se encuentra en la raiz
+  # 4. Install in terminal "dotnet add package MailKit"
 
-  # 5. Documentación de Endpoints https://documenter.getpostman.com/view/3453222/TWDfDYuL
+  # 5. Ejecutar el Proyecto con el comando "dotnet run --urls=http://localhost:8080"
+  
+  # 6. Importar en Postman Getaclub.postman_collection.json, se encuentra en la raiz
+
+  # 7. Documentación de Endpoints https://documenter.getpostman.com/view/3453222/TWDfDYuL
 
  

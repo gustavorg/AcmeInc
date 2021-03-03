@@ -4,6 +4,8 @@ using System.Linq;
 using getaclub_api.Models;
 using getaclub_api.Services;
 using System;
+using MailKit.Net.Smtp;
+using MimeKit;
 
 namespace getaclub_api.Controllers
 {
@@ -229,6 +231,54 @@ namespace getaclub_api.Controllers
 
             return Ok(rtn);
         }
-    }
 
+        [HttpPost]
+        [Route("alert")]
+        public IActionResult alert()
+        {
+            var correoEmisor="";
+            var passEmisor="";
+
+            BookingService booking = new BookingService();
+            List<BookingModel>  alerts = null;
+            bool status = false; string result = "";
+        
+                alerts=booking.alert();
+                if (alerts != null && alerts.Count > 0)
+                {
+                    Console.WriteLine(alerts);
+                    foreach (var alert in alerts)
+                    {
+                        var message = new MimeMessage();
+                        message.From.Add(new MailboxAddress("Getaclub ",correoEmisor));
+                        message.To.Add(new MailboxAddress("Sr(a): ",alert.client.email));
+                        message.Subject = "Alerta de término de reserva";
+                        message.Body = new TextPart("plain"){
+                            Text = "Estimado cliente su reserva se encuentra pronto a finalizar. Recuerde que su reserva finaliza "+alert.date+" "+ alert.endHour};
+                        using(var client = new SmtpClient())
+                        {
+                            // gmail
+                            client.Connect ("smtp.gmail.com", 465, true);
+                            // hotmail
+                           // smtp.Connect("smtp.live.com", 587, SecureSocketOptions.StartTls);
+
+                            // office 365
+                            //smtp.Connect("smtp.office365.com", 587, SecureSocketOptions.StartTls);
+                            client.Authenticate(correoEmisor,passEmisor);
+                            client.Send(message);
+                            client.Disconnect(true);
+                        }
+                    }
+                    status = true;
+                    result= "Se envío la alerta correctamente";
+                }
+
+                var rtn = new {
+                    status = status,
+                    result = result
+                };
+
+                return Ok(rtn);
+        }
+    }
 }
